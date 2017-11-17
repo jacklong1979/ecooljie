@@ -1,0 +1,2026 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7224DD19-CE71-4BAC-B15C-871B859F5533}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ecooljie.AngularJS.UI</RootNamespace>
+    <AssemblyName>ecooljie.AngularJS.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.2\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.Web.4.5.0\lib\net35\NLog.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\CollectionModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountBindingModels.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\angular.js-1.6.6\angularFiles.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\animation-bp\app.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\animation-bp\bp.conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\animation-bp\jquery-noop.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\animation-bp\main.html" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\bootstrap-compile-bp\app.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\bootstrap-compile-bp\bootstrap-carousel.tpl.html" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\bootstrap-compile-bp\bootstrap-theme.tpl.html" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\bootstrap-compile-bp\bp.conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\bootstrap-compile-bp\main.html" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\event-delegation-bp\app.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\event-delegation-bp\bp.conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\event-delegation-bp\main.html" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\largetable-bp\app.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\largetable-bp\bp.conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\largetable-bp\jquery-noop.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\largetable-bp\main.html" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\ng-class-bp\app.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\ng-class-bp\bp.conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\ng-class-bp\main.html" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\ng-options-bp\app.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\ng-options-bp\bp.conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\ng-options-bp\main.html" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\orderby-bp\app.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\orderby-bp\bp.conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\orderby-bp\jquery-noop.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\orderby-bp\main.html" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\parsed-expressions-bp\app.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\parsed-expressions-bp\bp.conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\parsed-expressions-bp\main.html" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\select-ng-value-bp\app.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\select-ng-value-bp\bp.conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\select-ng-value-bp\main.html" />
+    <Content Include="Scripts\angular.js-1.6.6\css\angular-scenario.css" />
+    <Content Include="Scripts\angular.js-1.6.6\css\angular.css" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\assets\css\angular-topnav.css" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\assets\css\animations.css" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\assets\css\docs.css" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\assets\css\doc_widgets.css" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\assets\css\prettify-theme.css" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\assets\css\prettify.css" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\assets\Error404.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\assets\favicon.ico" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\assets\img\angularjs-for-header-only.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\assets\img\AngularJS-small.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\assets\img\bullet.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\assets\img\glyphicons-halflings-white.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\assets\img\glyphicons-halflings.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\assets\js\angular-bootstrap\dropdown-toggle.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\assets\js\search-worker.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\e2e\api-docs\api-pages.scenario.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\e2e\api-docs\provider-pages.scenario.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\e2e\api-docs\service-pages.scenario.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\e2e\app.scenario.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\src\app.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\src\directives.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\src\docs.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\src\errors.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\src\examples.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\src\search.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\src\tutorials.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\src\versions.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\test\directivesSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\test\docsSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\test\errorsSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\index.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\inline-tag-defs\type.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\processors\error-docs.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\processors\index-page.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\processors\keywords.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\processors\pages-data.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\processors\versions-data.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\services\deployments\debug.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\services\deployments\default.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\services\deployments\jquery.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\services\deployments\production.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\services\errorNamespaceMap.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\services\getMinerrInfo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\services\getVersion.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\tag-defs\deprecated.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\tag-defs\deprecated.spec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\tag-defs\installation.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\tag-defs\sortOrder.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\tag-defs\this.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\tag-defs\tutorial-step.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\app\angular-service.template.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\app\error.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\app\errorNamespace.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\app\indexPage.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\app\nav-data.template.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\app\pages-data.template.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\app\tutorial.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\examples\index.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\examples\protractorTests.template.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\examples\runnableExample.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\examples\template.css" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\examples\template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\examples\template.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\api\api.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\api\componentGroup.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\api\directive.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\api\filter.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\api\function.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\api\input.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\api\module.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\api\object.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\api\provider.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\api\service.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\api\type.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\base.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\lib\deprecated.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\lib\events.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\lib\macros.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\lib\methods.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\lib\params.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\lib\properties.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\lib\returns.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\lib\this.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\ngdoc\overview.template.html" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\gulpfile.js" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\angular_parts.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\form_data_flow.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\component-based-architecture.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\component-hierarchy.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\component-routes.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\concepts-databinding1.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\concepts-databinding2.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\concepts-directive.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\concepts-module-injector.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\concepts-module-service.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\concepts-runtime.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\concepts-scope-watch-strategies.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\concepts-scope.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\concepts-startup.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\concepts-view.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\crisis-detail.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\crisis-list.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\di_sequence_final.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\dom_scope_final.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\forms-debounce.gif" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\forms-update-on-blur.gif" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\hashbang_vs_regular_url.jpg" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\hero-detail.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\heroes-list.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\scenario_runner.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\guide\simple_scope_final.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\helloworld.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\helloworld_2way.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\One_Way_Data_Binding.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\tutorial\catalog_screen.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\tutorial\tutorial_00.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\tutorial\tutorial_02.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\tutorial\tutorial_03.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\tutorial\tutorial_05.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\tutorial\tutorial_06.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\tutorial\tutorial_09.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\tutorial\tutorial_10.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\tutorial\tutorial_12.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\img\Two_Way_Data_Binding.png" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\protractor-conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\Gruntfile.js" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\closure\currencySymbols.js" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\closure\datetimeSymbols.js" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\closure\datetimeSymbolsExt.js" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\closure\numberSymbols.js" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\closure\numberSymbolsExt.js" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\closure\pluralRules.js" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\e2e\i18n-e2e.js" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\e2e\localeTest_cs.html" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\e2e\localeTest_de.html" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\e2e\localeTest_en.html" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\e2e\localeTest_es.html" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\e2e\localeTest_sk.html" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\e2e\localeTest_zh.html" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\e2e\runner.html" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\spec\closureI18nExtractorSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\spec\converterSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\spec\parserSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\src\closureI18nExtractor.js" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\src\closureSlurper.js" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\src\converter.js" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\src\parser.js" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\ucd\spec\extactValuesSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\ucd\spec\generateCodeSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\ucd\src\extract.js" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\ucd\src\extractValues.js" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\ucd\src\generateCode.js" />
+    <Content Include="Scripts\angular.js-1.6.6\images\css\arrow_left.gif" />
+    <Content Include="Scripts\angular.js-1.6.6\images\css\arrow_right.gif" />
+    <Content Include="Scripts\angular.js-1.6.6\images\css\indicator-wait.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.graffle\image1.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.graffle\image2.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.graffle\image4.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.graffle\image8.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.graffle\image9.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.svg\Canvas_8.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.svg\Canvas_angular___parts.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.svg\Canvas_angular___usage.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.svg\image1.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.svg\image2.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.svg\image4.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.svg\image8.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.svg\image9.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.svg\Notes.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.svg\One_Way_Data_Binding.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.svg\RESTful_URL.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.svg\RESTy.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.svg\Two_Way_Data_Binding.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\about_controller.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\about_model.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\concepts.graffle\image1.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\concepts.graffle\image4.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\concepts.graffle\image5.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\concepts.svg\Canvas_11.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\concepts.svg\controller.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\concepts.svg\databinding1.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\concepts.svg\databinding2.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\concepts.svg\directive.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\concepts.svg\filter.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\concepts.svg\image4.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\concepts.svg\image5.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\concepts.svg\injector-module.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\concepts.svg\runtime.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\concepts.svg\scope.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\concepts.svg\startup.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\concepts.svg\view.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\di_sequence.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\dom_scope.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\form_data_flow.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\hashbang_vs_regular_url.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\simple_scope.graffle\image7.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\simple_scope.graffle\QuickLook\Thumbnail.tiff" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\simple_scope.svg\image7.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\simple_scope.svg\simple_scope.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\di_sequence.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\simple_scope.graffle\image7.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\simple_scope.graffle\QuickLook\Thumbnail.tiff" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\simple_scope.svg\image7.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\simple_scope.svg\simple_scope.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_00.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_02.graffle\image11.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_02.graffle\QuickLook\Thumbnail.tiff" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_02.svg\image11.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_02.svg\tutorial_02.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_03.svg\image11.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_03.svg\tutorial_03.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_05.graffle\image13.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_05.graffle\QuickLook\Thumbnail.tiff" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_05.svg\image13.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_05.svg\tutorial_05.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_06.graffle\image15.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_06.graffle\QuickLook\Thumbnail.tiff" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_06.svg\image15.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_06.svg\tutorial_06.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_09.graffle\image9.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_09.graffle\QuickLook\Thumbnail.tiff" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_09.svg\image9.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_09.svg\tutorial_09.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_10.graffle\image10.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_10.graffle\QuickLook\Thumbnail.tiff" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_10.svg\image10.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_10.svg\tutorial_10.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_12.graffle\image10.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_12.graffle\QuickLook\Thumbnail.tiff" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_12.svg\image10.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_12.svg\tutorial_12.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_proto.graffle\image7.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_proto.graffle\QuickLook\Thumbnail.tiff" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_proto.svg\image7.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_proto.svg\tutorial_proto.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\xhr_service.svg" />
+    <Content Include="Scripts\angular.js-1.6.6\images\favicon.ico" />
+    <Content Include="Scripts\angular.js-1.6.6\images\logo\AngularJS-Shield.exports\AngularJS-Shield-huge.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\logo\AngularJS-Shield.exports\AngularJS-Shield-large.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\logo\AngularJS-Shield.exports\AngularJS-Shield-medium.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\logo\AngularJS-Shield.exports\AngularJS-Shield-small.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\logo\AngularJS.exports\AngularJS-huge.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\logo\AngularJS.exports\AngularJS-large.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\logo\AngularJS.exports\AngularJS-medium.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\logo\AngularJS.exports\AngularJS-small.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\logo\AngularJS.graffle\image1.png" />
+    <Content Include="Scripts\angular.js-1.6.6\images\logo\AngularJS.graffle\image2.png" />
+    <Content Include="Scripts\angular.js-1.6.6\karma-docs.conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\karma-jqlite.conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\karma-jquery-2.1.conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\karma-jquery-2.2.conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\karma-jquery.conf-factory.js" />
+    <Content Include="Scripts\angular.js-1.6.6\karma-jquery.conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\karma-modules.conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\karma-shared.conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\lib\browserstack\start_tunnel.js" />
+    <Content Include="Scripts\angular.js-1.6.6\lib\grunt\plugins.js" />
+    <Content Include="Scripts\angular.js-1.6.6\lib\grunt\utils.js" />
+    <Content Include="Scripts\angular.js-1.6.6\lib\grunt\validate-angular-files.js" />
+    <Content Include="Scripts\angular.js-1.6.6\lib\promises-aplus\promises-aplus-test-adapter.js" />
+    <Content Include="Scripts\angular.js-1.6.6\lib\versions\version-info.js" />
+    <Content Include="Scripts\angular.js-1.6.6\protractor-conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\protractor-jenkins-conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\protractor-shared-conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\protractor-travis-conf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\code.angularjs.org-firebase\functions\index.js" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\code.angularjs.org-firebase\public\favicon.ico" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\code.angularjs.org-firebase\public\googleb96cceae5888d79f.html" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\code.angularjs.org-firebase\public\robots.txt" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\compare-master-to-stable.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\angular.bind.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\Angular.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\AngularPublic.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\apis.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\auto\injector.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\jqLite.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\loader.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\minErr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngAnimate\animateChildrenDirective.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngAnimate\animateCss.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngAnimate\animateCssDriver.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngAnimate\animateJs.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngAnimate\animateJsDriver.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngAnimate\animateQueue.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngAnimate\animation.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngAnimate\module.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngAnimate\ngAnimateSwap.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngAnimate\rafScheduler.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngAnimate\shared.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngAria\aria.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngComponentRouter\Router.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngCookies\cookies.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngCookies\cookieStore.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngCookies\cookieWriter.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_af-na.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_af-za.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_af.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_agq-cm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_agq.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ak-gh.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ak.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_am-et.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_am.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-001.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-ae.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-bh.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-dj.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-dz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-eg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-eh.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-er.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-il.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-iq.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-jo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-km.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-kw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-lb.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-ly.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-ma.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-mr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-om.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-ps.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-qa.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-sa.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-sd.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-so.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-ss.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-sy.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-td.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-tn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-xb.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar-ye.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ar.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_as-in.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_as.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_asa-tz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_asa.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ast-es.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ast.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_az-cyrl-az.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_az-cyrl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_az-latn-az.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_az-latn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_az.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bas-cm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bas.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_be-by.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_be.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bem-zm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bem.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bez-tz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bez.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bg-bg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bm-ml.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bn-bd.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bn-in.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bo-cn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bo-in.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_br-fr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_br.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_brx-in.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_brx.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bs-cyrl-ba.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bs-cyrl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bs-latn-ba.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bs-latn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_bs.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ca-ad.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ca-es-valencia.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ca-es.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ca-fr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ca-it.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ca.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ce-ru.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ce.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_cgg-ug.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_cgg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_chr-us.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_chr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ckb-arab-iq.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ckb-arab-ir.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ckb-arab.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ckb-iq.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ckb-ir.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ckb-latn-iq.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ckb-latn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ckb.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_cs-cz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_cs.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_cu-ru.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_cu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_cy-gb.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_cy.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_da-dk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_da-gl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_da.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_dav-ke.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_dav.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_de-at.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_de-be.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_de-ch.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_de-de.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_de-it.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_de-li.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_de-lu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_de.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_dje-ne.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_dje.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_dsb-de.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_dsb.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_dua-cm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_dua.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_dyo-sn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_dyo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_dz-bt.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_dz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ebu-ke.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ebu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ee-gh.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ee-tg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ee.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_el-cy.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_el-gr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_el.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-001.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-150.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-ag.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-ai.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-as.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-at.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-au.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-bb.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-be.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-bi.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-bm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-bs.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-bw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-bz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-ca.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-cc.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-ch.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-ck.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-cm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-cx.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-cy.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-de.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-dg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-dk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-dm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-er.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-fi.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-fj.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-fk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-fm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-gb.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-gd.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-gg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-gh.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-gi.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-gm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-gu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-gy.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-hk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-ie.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-il.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-im.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-in.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-io.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-iso.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-je.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-jm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-ke.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-ki.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-kn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-ky.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-lc.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-lr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-ls.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-mg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-mh.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-mo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-mp.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-ms.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-mt.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-mu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-mw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-my.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-na.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-nf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-ng.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-nl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-nr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-nu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-nz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-pg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-ph.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-pk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-pn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-pr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-pw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-rw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-sb.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-sc.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-sd.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-se.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-sg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-sh.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-si.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-sl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-ss.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-sx.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-sz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-tc.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-tk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-to.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-tt.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-tv.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-tz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-ug.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-um.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-us-posix.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-us.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-vc.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-vg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-vi.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-vu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-ws.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-xa.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-za.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-zm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en-zw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_en.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_eo-001.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_eo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-419.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-ar.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-bo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-br.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-bz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-cl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-co.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-cr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-cu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-do.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-ea.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-ec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-es.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-gq.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-gt.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-hn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-ic.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-mx.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-ni.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-pa.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-pe.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-ph.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-pr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-py.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-sv.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-us.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-uy.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es-ve.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_es.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_et-ee.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_et.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_eu-es.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_eu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ewo-cm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ewo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fa-af.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fa-ir.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fa.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ff-cm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ff-gn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ff-mr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ff-sn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ff.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fi-fi.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fi.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fil-ph.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fil.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fo-dk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fo-fo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-be.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-bf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-bi.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-bj.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-bl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-ca.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-cd.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-cf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-cg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-ch.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-ci.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-cm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-dj.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-dz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-fr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-ga.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-gf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-gn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-gp.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-gq.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-ht.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-km.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-lu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-ma.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-mc.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-mf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-mg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-ml.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-mq.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-mr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-mu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-nc.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-ne.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-pf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-pm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-re.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-rw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-sc.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-sn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-sy.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-td.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-tg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-tn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-vu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-wf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr-yt.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fur-it.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fur.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fy-nl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_fy.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ga-ie.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ga.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_gd-gb.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_gd.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_gl-es.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_gl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_gsw-ch.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_gsw-fr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_gsw-li.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_gsw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_gu-in.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_gu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_guz-ke.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_guz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_gv-im.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_gv.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ha-gh.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ha-ne.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ha-ng.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ha.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_haw-us.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_haw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_he-il.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_he.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_hi-in.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_hi.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_hr-ba.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_hr-hr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_hr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_hsb-de.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_hsb.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_hu-hu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_hu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_hy-am.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_hy.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_id-id.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_id.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ig-ng.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ig.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ii-cn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ii.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_in.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_is-is.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_is.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_it-ch.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_it-it.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_it-sm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_it-va.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_it.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_iw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ja-jp.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ja.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_jgo-cm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_jgo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_jmc-tz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_jmc.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ka-ge.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ka.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kab-dz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kab.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kam-ke.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kam.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kde-tz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kde.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kea-cv.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kea.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_khq-ml.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_khq.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ki-ke.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ki.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kk-kz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kkj-cm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kkj.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kl-gl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kln-ke.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kln.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_km-kh.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_km.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kn-in.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ko-kp.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ko-kr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ko.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kok-in.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kok.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ks-in.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ks.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ksb-tz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ksb.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ksf-cm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ksf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ksh-de.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ksh.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kw-gb.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_kw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ky-kg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ky.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_lag-tz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_lag.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_lb-lu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_lb.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_lg-ug.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_lg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_lkt-us.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_lkt.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ln-ao.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ln-cd.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ln-cf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ln-cg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ln.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_lo-la.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_lo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_lrc-iq.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_lrc-ir.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_lrc.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_lt-lt.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_lt.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_lu-cd.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_lu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_luo-ke.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_luo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_luy-ke.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_luy.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_lv-lv.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_lv.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mas-ke.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mas-tz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mas.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mer-ke.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mer.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mfe-mu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mfe.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mg-mg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mgh-mz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mgh.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mgo-cm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mgo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mk-mk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ml-in.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ml.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mn-mn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mr-in.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ms-bn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ms-my.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ms-sg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ms.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mt-mt.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mt.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mua-cm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mua.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_my-mm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_my.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mzn-ir.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_mzn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_naq-na.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_naq.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nb-no.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nb-sj.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nb.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nd-zw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nd.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nds-de.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nds-nl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nds.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ne-in.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ne-np.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ne.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nl-aw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nl-be.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nl-bq.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nl-cw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nl-nl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nl-sr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nl-sx.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nmg-cm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nmg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nn-no.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nnh-cm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nnh.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_no-no.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_no.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nus-ss.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nus.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nyn-ug.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_nyn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_om-et.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_om-ke.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_om.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_or-in.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_or.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_os-ge.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_os-ru.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_os.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pa-arab-pk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pa-arab.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pa-guru-in.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pa-guru.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pa.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pl-pl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_prg-001.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_prg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ps-af.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ps.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pt-ao.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pt-br.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pt-ch.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pt-cv.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pt-gq.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pt-gw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pt-lu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pt-mo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pt-mz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pt-pt.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pt-st.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pt-tl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_pt.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_qu-bo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_qu-ec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_qu-pe.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_qu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_rm-ch.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_rm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_rn-bi.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_rn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ro-md.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ro-ro.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ro.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_rof-tz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_rof.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ru-by.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ru-kg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ru-kz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ru-md.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ru-ru.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ru-ua.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ru.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_rw-rw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_rw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_rwk-tz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_rwk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sah-ru.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sah.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_saq-ke.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_saq.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sbp-tz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sbp.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_se-fi.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_se-no.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_se-se.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_se.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_seh-mz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_seh.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ses-ml.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ses.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sg-cf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sh.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_shi-latn-ma.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_shi-latn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_shi-tfng-ma.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_shi-tfng.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_shi.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_si-lk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_si.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sk-sk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sl-si.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_smn-fi.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_smn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sn-zw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_so-dj.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_so-et.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_so-ke.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_so-so.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_so.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sq-al.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sq-mk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sq-xk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sq.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sr-cyrl-ba.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sr-cyrl-me.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sr-cyrl-rs.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sr-cyrl-xk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sr-cyrl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sr-latn-ba.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sr-latn-me.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sr-latn-rs.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sr-latn-xk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sr-latn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sv-ax.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sv-fi.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sv-se.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sv.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sw-cd.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sw-ke.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sw-tz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sw-ug.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_sw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ta-in.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ta-lk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ta-my.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ta-sg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ta.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_te-in.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_te.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_teo-ke.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_teo-ug.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_teo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_th-th.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_th.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ti-er.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ti-et.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ti.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_tk-tm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_tk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_tl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_to-to.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_to.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_tr-cy.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_tr-tr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_tr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_twq-ne.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_twq.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_tzm-ma.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_tzm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ug-cn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ug.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_uk-ua.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_uk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ur-in.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ur-pk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_ur.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_uz-arab-af.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_uz-arab.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_uz-cyrl-uz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_uz-cyrl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_uz-latn-uz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_uz-latn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_uz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_vai-latn-lr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_vai-latn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_vai-vaii-lr.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_vai-vaii.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_vai.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_vi-vn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_vi.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_vo-001.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_vo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_vun-tz.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_vun.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_wae-ch.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_wae.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_xog-ug.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_xog.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_yav-cm.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_yav.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_yi-001.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_yi.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_yo-bj.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_yo-ng.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_yo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_yue-hk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_yue.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_zgh-ma.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_zgh.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_zh-cn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_zh-hans-cn.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_zh-hans-hk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_zh-hans-mo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_zh-hans-sg.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_zh-hans.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_zh-hant-hk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_zh-hant-mo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_zh-hant-tw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_zh-hant.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_zh-hk.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_zh-tw.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_zh.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_zu-za.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\angular-locale_zu.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngMessageFormat\messageFormatCommon.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngMessageFormat\messageFormatInterpolationParts.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngMessageFormat\messageFormatParser.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngMessageFormat\messageFormatSelector.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngMessageFormat\messageFormatService.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngMessages\messages.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngMock\angular-mocks.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngMock\browserTrigger.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngParseExt\module.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngParseExt\ucd.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngResource\resource.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngRoute\directive\ngView.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngRoute\route.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngRoute\routeParams.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngSanitize\filter\linky.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngSanitize\sanitize.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngScenario\angular-bootstrap.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngScenario\Application.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngScenario\Describe.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngScenario\dsl.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngScenario\Future.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngScenario\matchers.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngScenario\ObjectModel.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngScenario\output\Html.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngScenario\output\Json.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngScenario\output\Object.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngScenario\output\Xml.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngScenario\Runner.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngScenario\Scenario.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngScenario\SpecRunner.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngTouch\directive\ngClick.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngTouch\directive\ngSwipe.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngTouch\swipe.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngTouch\touch.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\anchorScroll.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\animate.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\animateCss.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\animateRunner.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\browser.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\cacheFactory.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\compile.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\controller.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\cookieReader.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\a.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\attrs.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\directives.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\form.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\input.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngBind.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngChange.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngClass.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngCloak.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngController.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngCsp.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngEventDirs.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngIf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngInclude.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngInit.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngList.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngModel.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngModelOptions.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngNonBindable.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngOptions.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngPluralize.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngRepeat.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngShowHide.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngStyle.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngSwitch.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\ngTransclude.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\script.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\select.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\directive\validators.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\document.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\exceptionHandler.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\filter.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\filter\filter.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\filter\filters.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\filter\limitTo.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\filter\orderBy.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\forceReflow.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\http.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\httpBackend.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\interpolate.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\interval.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\jsonpCallbacks.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\locale.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\location.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\log.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\parse.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\q.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\raf.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\rootElement.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\rootScope.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\sanitizeUri.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\sce.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\sniffer.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\templateRequest.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\testability.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\timeout.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\urlUtils.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ng\window.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\publishExternalApis.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\shallowCopy.js" />
+    <Content Include="Scripts\angular.js-1.6.6\src\stringify.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\AngularSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ApiSpecs.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\auto\injectorSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\BinderSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\anchor-scroll-y-offset\index.html" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\anchor-scroll-y-offset\script.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\anchor-scroll\index.html" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\anchor-scroll\script.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\angular-already-loaded\index.html" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\angular-already-loaded\script.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\http\index.html" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\http\script.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\input-hidden\index.html" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\loader\index.html" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\loader\script.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\ng-jq-jquery\index.html" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\ng-jq-jquery\script.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\ng-jq\index.html" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\ng-jq\script.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\ng-route-promise\index.html" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\ng-route-promise\script.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\ready\index.html" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\ready\script.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\sample\index.html" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\sample\script.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\version\index.html" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\tests\anchor-scroll.spec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\tests\angular-already-loaded.spec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\tests\helpers\main.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\tests\http.spec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\tests\input-hidden.spec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\tests\loader.spec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\tests\ng-jq.spec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\tests\ng-route-promise.spec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\tests\ready.spec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\tests\sample.spec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\tests\version.spec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\tools\fixture.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\tools\index.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\tools\middleware.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\tools\util.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\helpers\matchers.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\helpers\privateMocks.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\helpers\privateMocksSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\helpers\support.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\helpers\supportSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\helpers\testabilityPatch.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\jqLiteSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\jQueryPatchSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\jquery_alias.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\jquery_remove.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\loaderSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\minErrSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\modules\no_bootstrap.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngAnimate\animateCssDriverSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngAnimate\animateCssSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngAnimate\animateJsDriverSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngAnimate\animateJsSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngAnimate\animateSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngAnimate\animationHelperFunctionsSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngAnimate\animationSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngAnimate\integrationSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngAnimate\ngAnimateSwapSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngAnimate\rafSchedulerSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngAria\ariaSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngCookies\cookiesSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngCookies\cookieStoreSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngCookies\cookieWriterSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngMessageFormat\messageFormatSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngMessages\messagesSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngMock\angular-mocksSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngResource\resourceSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngRoute\directive\ngViewSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngRoute\routeParamsSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngRoute\routeSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngSanitize\directive\ngBindHtmlSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngSanitize\filter\linkySpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngSanitize\sanitizeSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\ApplicationSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\DescribeSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\dslSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\e2e\Runner-compiled.html" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\e2e\Runner.html" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\e2e\style.css" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\e2e\widgets-scenario.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\e2e\widgets.html" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\FutureSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\matchersSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\mocks.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\ObjectModelSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\output\HtmlSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\output\jsonSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\output\objectSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\output\xmlSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\RunnerSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\ScenarioSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\SpecRunnerSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngTouch\directive\ngClickSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngTouch\directive\ngSwipeSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngTouch\swipeSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\anchorScrollSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\animateCssSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\animateRunnerSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\animateSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\browserSpecs.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\cacheFactorySpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\compileSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\controllerSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\cookieReaderSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\aSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\booleanAttrsSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\formSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\inputSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngBindSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngChangeSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngClassSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngClickSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngCloakSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngControllerSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngEventDirsSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngIfSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngIncludeSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngInitSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngKeySpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngListSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngModelOptionsSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngModelSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngNonBindableSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngOptionsSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngPluralizeSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngRepeatSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngShowHideSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngSrcsetSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngSrcSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngStyleSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\ngSwitchSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\scriptSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\selectSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\styleSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\directive\validatorsSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\documentSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\exceptionHandlerSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\filterSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\filter\filterSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\filter\filtersSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\filter\limitToSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\filter\orderBySpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\forceReflowSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\httpBackendSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\httpSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\interpolateSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\intervalSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\jsonpCallbacksSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\localeSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\locationSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\logSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\parseSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\qSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\rafSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\rootElementSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\rootScopeSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\sanitizeUriSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\sceSpecs.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\snifferSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\templateRequestSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\testabilitySpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\timeoutSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\urlUtilsSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ng\windowSpec.js" />
+    <Content Include="Scripts\angular.js-1.6.6\test\stringifySpec.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\angular.js-1.6.6\.editorconfig" />
+    <Content Include="Scripts\angular.js-1.6.6\.eslintignore" />
+    <Content Include="Scripts\angular.js-1.6.6\.eslintrc-base.json" />
+    <Content Include="Scripts\angular.js-1.6.6\.eslintrc-browser.json" />
+    <Content Include="Scripts\angular.js-1.6.6\.eslintrc-node.json" />
+    <Content Include="Scripts\angular.js-1.6.6\.eslintrc-todo.json" />
+    <Content Include="Scripts\angular.js-1.6.6\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\.firebaserc" />
+    <Content Include="Scripts\angular.js-1.6.6\.gitattributes" />
+    <Content Include="Scripts\angular.js-1.6.6\.github\ISSUE_TEMPLATE.md" />
+    <Content Include="Scripts\angular.js-1.6.6\.github\PULL_REQUEST_TEMPLATE.md" />
+    <Content Include="Scripts\angular.js-1.6.6\.gitignore" />
+    <Content Include="Scripts\angular.js-1.6.6\.nvmrc" />
+    <Content Include="Scripts\angular.js-1.6.6\.travis.yml" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\benchmarks\README.md" />
+    <Content Include="Scripts\angular.js-1.6.6\bower.json" />
+    <Content Include="Scripts\angular.js-1.6.6\CHANGELOG.md" />
+    <Content Include="Scripts\angular.js-1.6.6\CONTRIBUTING.md" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\e2e\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\src\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\app\test\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\ignore.words" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\app\json-doc.template.json" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\examples\manifest.template.json" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\examples\template.json" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\examples\template.protractor" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\examples\template.scenario" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\config\templates\examples\template.spec" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\api\index.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24animate\nongcls.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24animate\notcsel.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24cacheFactory\iid.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24compile\baddir.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24compile\badrestrict.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24compile\ctreq.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24compile\infchng.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24compile\iscp.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24compile\missingattr.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24compile\multidir.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24compile\multilink.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24compile\noctrl.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24compile\nodomevents.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24compile\nonassign.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24compile\noslot.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24compile\reqslot.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24compile\selmulti.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24compile\tpload.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24compile\tplrt.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24compile\uterdir.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24controller\ctrlfmt.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24controller\ctrlreg.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24controller\noscp.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24http\baddata.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24http\badjsonp.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24http\badreq.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24injector\cdep.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24injector\itkn.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24injector\modulerr.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24injector\nomod.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24injector\pget.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24injector\strictdi.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24injector\undef.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24injector\unpr.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24interpolate\badexpr.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24interpolate\dupvalue.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24interpolate\interr.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24interpolate\logicbug.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24interpolate\nochgmustache.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24interpolate\noconcat.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24interpolate\reqarg.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24interpolate\reqcomma.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24interpolate\reqendbrace.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24interpolate\reqendinterp.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24interpolate\reqopenbrace.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24interpolate\reqother.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24interpolate\unknarg.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24interpolate\unsafe.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24interpolate\untermstr.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24interpolate\wantstring.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24location\badpath.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24location\ipthprfx.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24location\isrcharg.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24location\nobase.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24location\nostate.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24parse\lexerr.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24parse\syntax.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24parse\ueoe.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24q\norslvr.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24q\qcycle.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24resource\badargs.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24resource\badcfg.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24resource\badmember.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24resource\badname.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24rootScope\infdig.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24rootScope\inprog.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24sanitize\elclob.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24sanitize\noinert.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24sanitize\uinput.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24sce\icontext.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24sce\iequirks.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24sce\imatcher.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24sce\insecurl.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24sce\itype.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24sce\iwcard.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\%24sce\unsafe.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\filter\notarray.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\index.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\jqLite\nosel.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\jqLite\offargs.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\jqLite\onargs.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\linky\notstring.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ngModel\constexpr.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ngModel\datefmt.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ngModel\nonassign.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ngModel\nopromise.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ngModel\numfmt.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ngOptions\iexp.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ngPattern\noregexp.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ngRepeat\badident.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ngRepeat\dupes.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ngRepeat\iexp.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ngRepeat\iidexp.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ngTransclude\orphan.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ng\aobj.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ng\areq.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ng\badname.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ng\btstrpd.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ng\cpi.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ng\cpta.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ng\cpws.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\ng\test.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\error\orderBy\notarray.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\%24location.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\accessibility.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\animations.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\bootstrap.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\compiler.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\component-router.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\component.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\concepts.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\controller.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\css-styling.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\databinding.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\decorators.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\di.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\directive.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\e2e-testing.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\expression.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\external-resources.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\filter.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\forms.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\i18n.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\ie.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\index.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\interpolation.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\introduction.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\migration.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\module.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\production.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\providers.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\scope.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\security.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\services.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\templates.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\guide\unit-testing.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\misc\contribute.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\misc\downloading.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\misc\faq.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\misc\index.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\misc\started.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\notes\empty.tmp" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\tutorial\index.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\tutorial\step_00.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\tutorial\step_01.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\tutorial\step_02.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\tutorial\step_03.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\tutorial\step_04.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\tutorial\step_05.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\tutorial\step_06.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\tutorial\step_07.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\tutorial\step_08.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\tutorial\step_09.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\tutorial\step_10.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\tutorial\step_11.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\tutorial\step_12.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\tutorial\step_13.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\tutorial\step_14.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\docs\content\tutorial\the_end.ngdoc" />
+    <Content Include="Scripts\angular.js-1.6.6\firebase.json" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\e2e\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\generate.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\README.md" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\spec\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\src\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\ucd\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\ucd\spec\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\ucd\src\ucd.all.flat.xml.gz" />
+    <Content Include="Scripts\angular.js-1.6.6\i18n\update-closure.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.graffle\data.plist" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\Diagrams.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\about_controller.graffle" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\about_controller.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\about_model.graffle" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\about_model.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\concepts.graffle\data.plist" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\concepts.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\di_sequence.graffle" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\di_sequence.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\dom_scope.graffle" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\dom_scope.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\form_data_flow.graffle" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\form_data_flow.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\hashbang_vs_regular_url.graffle" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\hashbang_vs_regular_url.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\simple_scope.graffle\data.plist" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\simple_scope.graffle\QuickLook\Preview.pdf" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\guide\simple_scope.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\di_sequence.graffle" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\di_sequence.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\simple_scope.graffle\data.plist" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\simple_scope.graffle\QuickLook\Preview.pdf" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\simple_scope.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_00.graffle" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_00.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_02.graffle\data.plist" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_02.graffle\QuickLook\Preview.pdf" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_02.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_03.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_04.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_05.graffle\data.plist" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_05.graffle\QuickLook\Preview.pdf" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_06.graffle\data.plist" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_06.graffle\QuickLook\Preview.pdf" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_07.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_08-09.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_09.graffle\data.plist" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_09.graffle\QuickLook\Preview.pdf" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_10-11.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_10.graffle\data.plist" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_10.graffle\QuickLook\Preview.pdf" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_12.graffle\data.plist" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_12.graffle\QuickLook\Preview.pdf" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_proto.graffle\data.plist" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_proto.graffle\QuickLook\Preview.pdf" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\tutorial_proto.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\xhr_service.graffle" />
+    <Content Include="Scripts\angular.js-1.6.6\images\docs\tutorial\xhr_service.vdx" />
+    <Content Include="Scripts\angular.js-1.6.6\images\logo\AngularJS-Shield.exports\AngularJS-Shield.eps" />
+    <Content Include="Scripts\angular.js-1.6.6\images\logo\AngularJS-Shield.exports\AngularJS-Shield.pdf" />
+    <Content Include="Scripts\angular.js-1.6.6\images\logo\AngularJS-Shield.graffle" />
+    <Content Include="Scripts\angular.js-1.6.6\images\logo\AngularJS.exports\AngularJS.eps" />
+    <Content Include="Scripts\angular.js-1.6.6\images\logo\AngularJS.exports\AngularJS.pdf" />
+    <Content Include="Scripts\angular.js-1.6.6\images\logo\AngularJS.graffle\data.plist" />
+    <Content Include="Scripts\angular.js-1.6.6\lib\browserstack\start_tunnel.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\lib\browserstack\teardown_tunnel.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\lib\saucelabs\start_tunnel.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\lib\saucelabs\teardown_tunnel.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\LICENSE" />
+    <Content Include="Scripts\angular.js-1.6.6\logs\.gitignore" />
+    <Content Include="Scripts\angular.js-1.6.6\package.json" />
+    <Content Include="Scripts\angular.js-1.6.6\README.closure.md" />
+    <Content Include="Scripts\angular.js-1.6.6\readme.firebase.docs.md" />
+    <Content Include="Scripts\angular.js-1.6.6\README.md" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\angular.js\tag-release.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\angular.js\untag-release.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\bower\publish.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\bower\repos.inc" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\bower\unpublish.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\check-size.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\code.angularjs.org-firebase\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\code.angularjs.org-firebase\.firebaserc" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\code.angularjs.org-firebase\firebase.json" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\code.angularjs.org-firebase\functions\package.json" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\code.angularjs.org-firebase\readme.firebase.code.md" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\code.angularjs.org\publish.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\code.angularjs.org\unpublish.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\jenkins\build.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\jenkins\init-node.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\jenkins\master.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\jenkins\release.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\jenkins\undo-release.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\travis\before_build.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\travis\build.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\travis\print_logs.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\travis\start_browser_provider.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\travis\tear_down_browser_provider.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\travis\wait_for_browser_provider.sh" />
+    <Content Include="Scripts\angular.js-1.6.6\scripts\utils.inc" />
+    <Content Include="Scripts\angular.js-1.6.6\src\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\src\angular.prefix" />
+    <Content Include="Scripts\angular.js-1.6.6\src\angular.suffix" />
+    <Content Include="Scripts\angular.js-1.6.6\src\loader.prefix" />
+    <Content Include="Scripts\angular.js-1.6.6\src\loader.suffix" />
+    <Content Include="Scripts\angular.js-1.6.6\src\module.prefix" />
+    <Content Include="Scripts\angular.js-1.6.6\src\module.suffix" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngAnimate\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngLocale\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngMessageFormat\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngMock\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngRoute\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngSanitize\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngScenario\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngScenario\angular.prefix" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngScenario\angular.suffix" />
+    <Content Include="Scripts\angular.js-1.6.6\src\ngTouch\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\test\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\fixtures\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\tests\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\test\e2e\tools\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngAnimate\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\test\ngScenario\e2e\.eslintrc.json" />
+    <Content Include="Scripts\angular.js-1.6.6\TRIAGING.md" />
+    <Content Include="Scripts\angular.js-1.6.6\yarn.lock" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\angular.js-1.6.6\scripts\code.angularjs.org-firebase\storage.rules" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>27100</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:27100/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

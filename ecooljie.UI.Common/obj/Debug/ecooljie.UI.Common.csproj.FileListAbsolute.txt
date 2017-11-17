@@ -1,0 +1,8 @@
+G:\VS2015Code\NewEcooljie\ecooljie.UI.Common\bin\Debug\ecooljie.UI.Common.dll
+G:\VS2015Code\NewEcooljie\ecooljie.UI.Common\bin\Debug\ecooljie.UI.Common.pdb
+G:\VS2015Code\NewEcooljie\ecooljie.UI.Common\obj\Debug\ecooljie.UI.Common.dll
+G:\VS2015Code\NewEcooljie\ecooljie.UI.Common\obj\Debug\ecooljie.UI.Common.pdb
+G:\VS2015Code\NewEcooljie\ecooljie.UI.Common\obj\Debug\ecooljie.UI.Common.csprojResolveAssemblyReference.cache
+G:\VS2015Code\NewEcooljie\ecooljie.UI.Common\bin\Debug\NLog.dll
+G:\VS2015Code\NewEcooljie\ecooljie.UI.Common\bin\Debug\NLog.xml
+G:\VS2015Code\NewEcooljie\ecooljie.UI.Common\bin\Debug\NLog.config

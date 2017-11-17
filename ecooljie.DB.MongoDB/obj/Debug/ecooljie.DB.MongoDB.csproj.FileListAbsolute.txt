@@ -1,0 +1,13 @@
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDB\bin\Debug\ecooljie.DB.MongoDB.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDB\bin\Debug\ecooljie.DB.MongoDB.pdb
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDB\obj\Debug\ecooljie.DB.MongoDB.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDB\obj\Debug\ecooljie.DB.MongoDB.pdb
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDB\bin\Debug\MongoDB.Bson.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDB\bin\Debug\MongoDB.Driver.Core.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDB\bin\Debug\MongoDB.Driver.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDB\bin\Debug\Simple.Data.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDB\bin\Debug\Simple.Data.MongoDB.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDB\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDB\bin\Debug\MongoDB.Bson.xml
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDB\bin\Debug\MongoDB.Driver.xml
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDB\bin\Debug\MongoDB.Driver.Core.xml

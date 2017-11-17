@@ -1,0 +1,149 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Goods</title>
+    <script src="~/Areas/Admin/Scripts/Easyui-1.5.3/jquery.min.js"></script>
+    <script src="~/Areas/Admin/Scripts/Easyui-1.5.3/jquery.easyui.min.js"></script>
+    <script src="~/Areas/Admin/Scripts/Easyui-1.5.3/locale/easyui-lang-zh_CN.js"></script>
+</head>
+<body>
+    <div class="easyui-layout">
+        <div id="tb2" style="padding:5px;height:auto;display:none">
+            <div style="margin-bottom:5px">
+                <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="addType()">新增</a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true">修改</a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="true">保存</a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="true">删除</a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true">删除</a>
+            </div>
+            <div>
+                Date From: <input class="easyui-datebox" style="width:100px">
+                To: <input class="easyui-datebox" style="width:100px">
+                Language:
+                <select class="easyui-combobox" panelHeight="auto" style="width:100px">
+                    <option value="java">Java</option>
+                    <option value="c">C</option>
+                    <option value="basic">Basic</option>
+                    <option value="perl">Perl</option>
+                    <option value="python">Python</option>
+                </select>
+                类型名称：<input id="txtName" class="easyui-textbox" style="width:120px;height:32px">
+                <a href="#" class="easyui-linkbutton" onclick="query()" iconCls="icon-search">查询</a>
+            </div>
+        </div>
+        @****************************************************列表内容****************************************************@
+        <table id="goosTypeTable" class="easyui-datagrid" title="商品类型" style="width:100%;height:600px"
+               data-options="rownumbers:true,singleSelect:true,pagination:true,cache: false,url:'/Admin/Home/GetList',fit:false, method:'get',toolbar:'#tb2'">
+            <thead>
+                <tr>
+                    <th data-options="field:'GoodsTypeId',width:80,hidden:true">GoodsTypeId</th>
+                    <th data-options="field:'Code',width:100">编码</th>
+                    <th data-options="field:'Name',width:240,align:'center'">名称</th>
+                    <th data-options="field:'Remark',width:240,align:'center'">备注</th>
+                    <th data-options="field:'attr1',width:80,align:'center'">操作</th>
+                    
+                </tr>
+            </thead>
+        </table>
+       
+    </div>
+    @****************************************************新增内容****************************************************@
+
+        <div id="newType" class="easyui-window" title="商品类型" data-options="iconCls:'icon-save',modal:true,closed:true,minimizable:false,cache:false" style="width:320px;height:230px;padding:5px;">
+            <div style="padding:10px">
+                <form id="ff" method="post">
+                    <table cellpadding="5">
+                        <tr>
+                            <td>编码:</td>
+                            <td><input class="easyui-textbox" type="text" name="code" data-options="required:true" style="width:200px" /></td>
+                        </tr>
+                        <tr>
+                            <td>名称:</td>
+                            <td><input class="easyui-textbox" type="text" name="name" data-options="required:true" style="width:200px" /></td>
+                        </tr>
+                        <tr>
+                            <td>备注:</td>
+                            <td><input class="easyui-textbox" type="text" name="remark" style="width:200px" /></td>
+                        </tr>
+                    </table>
+                </form>
+                <div style="text-align:center;padding:5px">
+                    <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-ok'" onclick="submitForm()">确定</a>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" onclick="$('#newType').window('close')">取消</a>
+                </div>
+            </div>
+        </div>  
+    <script>
+        jQuery.alert = function (message,type)
+        {
+            if (type == null || type == undefined || type == "")
+            {
+                $.messager.alert('提示信息:', message, 'info');
+            }
+            else if (type == "info")
+            {
+                $.messager.alert('提示信息:', message, 'info');
+            }
+            else if (type == "error") {
+                $.messager.alert('错误信息:', message, 'error');
+            }
+            else if (type == "question") {
+                $.messager.alert('提示信息:', message, 'question');
+            }
+            else if (type == "warning") {
+                $.messager.alert('警告信息:', message, 'warning');
+            }
+            
+        }
+        //查询
+        function query() {
+            $('#goosTypeTable').datagrid('reload', { name: $('#txtName').textbox('getValue') });
+        }
+        //新增
+        function addType()
+        {
+            $('#ff').form('clear');
+            $('#newType').window('open');
+        }
+        //提交
+        function submitForm() {
+            $('#ff').form('submit', {
+                url: '/Admin/Home/SaveGoodsType',
+                onSubmit: function () {
+                    return $(this).form('enableValidation').form('validate');
+                },
+                success: function (data) {
+                    var obj = JSON.parse(data);
+                    if (obj.Success) {
+                        $.alert(obj.Message);
+                        $('#newType').window('close');
+                        query();
+                    }
+                    else {
+                        $.alert(obj.Error);
+                    }
+                }
+            });            
+        }
+        function onClickRow(index) {
+            if (editIndex != index) {
+                if (endEditing()) {
+                    $('#dg').datagrid('selectRow', index)
+							.datagrid('beginEdit', index);
+                    editIndex = index;
+                } else {
+                    $('#dg').datagrid('selectRow', editIndex);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

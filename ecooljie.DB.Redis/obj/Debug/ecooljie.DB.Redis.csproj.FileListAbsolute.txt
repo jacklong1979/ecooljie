@@ -1,0 +1,14 @@
+G:\VS2015Code\NewEcooljie\ecooljie.DB.Redis\bin\Debug\ecooljie.DB.Redis.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.Redis\bin\Debug\ecooljie.DB.Redis.pdb
+G:\VS2015Code\NewEcooljie\ecooljie.DB.Redis\obj\Debug\ecooljie.DB.Redis.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.Redis\obj\Debug\ecooljie.DB.Redis.pdb
+G:\VS2015Code\NewEcooljie\ecooljie.DB.Redis\bin\Debug\NLog.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.Redis\bin\Debug\NLog.Redis.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.Redis\bin\Debug\NLog.Web.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.Redis\bin\Debug\StackExchange.Redis.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.Redis\bin\Debug\NLog.xml
+G:\VS2015Code\NewEcooljie\ecooljie.DB.Redis\bin\Debug\NLog.Web.xml
+G:\VS2015Code\NewEcooljie\ecooljie.DB.Redis\bin\Debug\StackExchange.Redis.xml
+G:\VS2015Code\NewEcooljie\ecooljie.DB.Redis\bin\Debug\Newtonsoft.Json.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.Redis\bin\Debug\Newtonsoft.Json.xml
+G:\VS2015Code\NewEcooljie\ecooljie.DB.Redis\obj\Debug\ecooljie.DB.Redis.csprojResolveAssemblyReference.cache

@@ -1,0 +1,12 @@
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDriver\bin\Debug\ecooljie.DB.MongoDriver.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDriver\bin\Debug\ecooljie.DB.MongoDriver.pdb
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDriver\bin\Debug\MongoDB.Bson.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDriver\bin\Debug\MongoDB.Driver.Core.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDriver\bin\Debug\MongoDB.Driver.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDriver\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDriver\bin\Debug\MongoDB.Bson.xml
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDriver\bin\Debug\MongoDB.Driver.xml
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDriver\bin\Debug\MongoDB.Driver.Core.xml
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDriver\obj\Debug\ecooljie.DB.MongoDriver.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDriver\obj\Debug\ecooljie.DB.MongoDriver.pdb
+G:\VS2015Code\NewEcooljie\ecooljie.DB.MongoDriver\obj\Debug\ecooljie.DB.MongoDriver.csprojResolveAssemblyReference.cache

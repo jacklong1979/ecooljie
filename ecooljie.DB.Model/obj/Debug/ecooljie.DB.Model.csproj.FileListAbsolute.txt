@@ -1,0 +1,4 @@
+G:\VS2015Code\NewEcooljie\ecooljie.DB.Model\bin\Debug\ecooljie.DB.Model.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.Model\bin\Debug\ecooljie.DB.Model.pdb
+G:\VS2015Code\NewEcooljie\ecooljie.DB.Model\obj\Debug\ecooljie.DB.Model.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.Model\obj\Debug\ecooljie.DB.Model.pdb

@@ -1,0 +1,5 @@
+G:\VS2015Code\NewEcooljie\ecooljie.DB.SQLServer\bin\Debug\ecooljie.DB.SQLServer.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.SQLServer\bin\Debug\ecooljie.DB.SQLServer.pdb
+G:\VS2015Code\NewEcooljie\ecooljie.DB.SQLServer\obj\Debug\ecooljie.DB.SQLServer.dll
+G:\VS2015Code\NewEcooljie\ecooljie.DB.SQLServer\obj\Debug\ecooljie.DB.SQLServer.pdb
+G:\VS2015Code\NewEcooljie\ecooljie.DB.SQLServer\obj\Debug\ecooljie.DB.SQLServer.csprojResolveAssemblyReference.cache

@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecooljie.Web", "ecooljie.Web\ecooljie.Web.csproj", "{321CDB6E-1F63-43CA-A479-51920DCC4228}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecooljie.Model", "ecooljie.Model\ecooljie.Model.csproj", "{1CD750A8-D7EA-4E31-AF27-D02965C73DA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecooljie.Common", "ecooljie.Common\ecooljie.Common.csproj", "{DF15E90C-43F4-4A66-83EF-494BFB652A5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecooljie.DB", "ecooljie.DB\ecooljie.DB.csproj", "{3AC7F2E6-400C-49C3-A208-E077E0D7CA64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecooljie.DAL", "ecooljie.DAL\ecooljie.DAL.csproj", "{63370B17-50FB-44D6-9F60-D0D1176CF7BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecooljie.BLL", "ecooljie.BLL\ecooljie.BLL.csproj", "{EEBF12B2-5EEB-4109-807A-CB38DBB6420B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{321CDB6E-1F63-43CA-A479-51920DCC4228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{321CDB6E-1F63-43CA-A479-51920DCC4228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{321CDB6E-1F63-43CA-A479-51920DCC4228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{321CDB6E-1F63-43CA-A479-51920DCC4228}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CD750A8-D7EA-4E31-AF27-D02965C73DA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CD750A8-D7EA-4E31-AF27-D02965C73DA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CD750A8-D7EA-4E31-AF27-D02965C73DA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CD750A8-D7EA-4E31-AF27-D02965C73DA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF15E90C-43F4-4A66-83EF-494BFB652A5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF15E90C-43F4-4A66-83EF-494BFB652A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF15E90C-43F4-4A66-83EF-494BFB652A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF15E90C-43F4-4A66-83EF-494BFB652A5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AC7F2E6-400C-49C3-A208-E077E0D7CA64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AC7F2E6-400C-49C3-A208-E077E0D7CA64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AC7F2E6-400C-49C3-A208-E077E0D7CA64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AC7F2E6-400C-49C3-A208-E077E0D7CA64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63370B17-50FB-44D6-9F60-D0D1176CF7BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63370B17-50FB-44D6-9F60-D0D1176CF7BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63370B17-50FB-44D6-9F60-D0D1176CF7BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63370B17-50FB-44D6-9F60-D0D1176CF7BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEBF12B2-5EEB-4109-807A-CB38DBB6420B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEBF12B2-5EEB-4109-807A-CB38DBB6420B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEBF12B2-5EEB-4109-807A-CB38DBB6420B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEBF12B2-5EEB-4109-807A-CB38DBB6420B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
