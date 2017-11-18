@@ -21,7 +21,7 @@
                 <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="addType()">新增</a>
                 <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true">修改</a>
                 <a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="true">保存</a>
-                <a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="true">删除</a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="true" onclick="delType()">删除</a>
                 <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true">删除</a>
             </div>
             <div>
@@ -41,14 +41,15 @@
         </div>
         @****************************************************列表内容****************************************************@
         <table id="goosTypeTable" class="easyui-datagrid" title="商品类型" style="width:100%;height:600px"
-               data-options="rownumbers:true,singleSelect:true,pagination:true,cache: false,url:'/Admin/Home/GetList',fit:false, method:'get',toolbar:'#tb2'">
+               data-options="rownumbers:true,singleSelect:false,pagination:true,cache: false,url:'/Admin/Home/GetList',fit:false, method:'get',toolbar:'#tb2'">
             <thead>
                 <tr>
-                    <th data-options="field:'GoodsTypeId',width:80,hidden:true">GoodsTypeId</th>
+                    <th data-options="field:'ck',checkbox:true"></th>
+                    <th data-options="field:'GoodsTypeId',width:80,hidden:false">GoodsTypeId</th>
                     <th data-options="field:'Code',width:100">编码</th>
                     <th data-options="field:'Name',width:240,align:'center'">名称</th>
                     <th data-options="field:'Remark',width:240,align:'center'">备注</th>
-                    <th data-options="field:'attr1',width:80,align:'center'">操作</th>
+                    <th data-options="field:'attr1',width:80,align:'center',formatter:editButton">操作</th>
                     
                 </tr>
             </thead>
@@ -93,6 +94,48 @@
             $('#ff').form('clear');
             $('#newType').window('open');
         }
+        //删除
+        function delType() {
+            var ids = getSelections();//.join(',');
+            var url = "/Admin/Home/DeleteGoodsType";
+            debugger;
+            $.post(url, { _ids: ids }, function (result) {
+                if (result.Success) {
+                    $.alert(result.Message);
+                    $('#goosTypeTable').datagrid('reload', { name: $('#txtName').textbox('getValue') });
+                }
+                else {
+                    $.alert(result.Error);
+                }
+               
+            });
+        }
+        //修改按钮
+        function editButton(val, row)
+        {           
+            if (row!=null&&row!=undefined) {
+                var button = '<a href="#" class="easyui-linkbutton l-btn l-btn-small l-btn-plain" iconcls="icon-edit" plain="true" group="" id="" onclick="editGoosType("' + row.GoodsTypeId + '")">';
+                button += '<span class="l-btn-left l-btn-icon-left">';
+                button += '<span class="l-btn-text">编辑</span><span class="l-btn-icon icon-edit">&nbsp;</span></span>';
+                button += '</a>';
+                return button;
+            } else {
+                return "";
+            }
+        }
+        //获取选中的
+        function getSelections() {
+            var ids = [];
+            var rows = $('#goosTypeTable').datagrid('getSelections');
+            for (var i = 0; i < rows.length; i++) {
+                var row = rows[i];
+                ids.push(row.GoodsTypeId);
+            }
+            return ids;
+           
+        }
+        function editGoosType(goodstypeid)
+        { }
         //提交
         function submitForm() {
             $('#ff').form('submit', {

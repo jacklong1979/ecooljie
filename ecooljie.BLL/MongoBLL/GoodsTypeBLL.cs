@@ -43,6 +43,15 @@ namespace ecooljie.BLL.MongoBLL
                 throw new Exception(e.Message, e);
             }
         }
+        /// <summary>
+        /// 批量删除
+        /// </summary>
+        /// <param name="ids"></param>
+        /// <returns></returns>
+        public ResultMessage DeleteMany(List<string> ids)
+        {
+            return bll.DeleteMany(ids);
+        }
     }
    
 }

@@ -10,3 +10,15 @@ G:\VS2015Code\NewEcooljie\ecooljie.Model\bin\Debug\MongoDB.Bson.xml
 G:\VS2015Code\NewEcooljie\ecooljie.Model\bin\Debug\MongoDB.Driver.xml
 G:\VS2015Code\NewEcooljie\ecooljie.Model\bin\Debug\MongoDB.Driver.Core.xml
 G:\VS2015Code\NewEcooljie\ecooljie.Model\obj\Debug\ecooljie.Model.csprojResolveAssemblyReference.cache
+G:\VS2015Code\源代码\NewEcooljie\ecooljie.Model\bin\Debug\ecooljie.Model.dll
+G:\VS2015Code\源代码\NewEcooljie\ecooljie.Model\bin\Debug\ecooljie.Model.pdb
+G:\VS2015Code\源代码\NewEcooljie\ecooljie.Model\bin\Debug\MongoDB.Bson.dll
+G:\VS2015Code\源代码\NewEcooljie\ecooljie.Model\bin\Debug\MongoDB.Driver.Core.dll
+G:\VS2015Code\源代码\NewEcooljie\ecooljie.Model\bin\Debug\MongoDB.Driver.dll
+G:\VS2015Code\源代码\NewEcooljie\ecooljie.Model\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+G:\VS2015Code\源代码\NewEcooljie\ecooljie.Model\bin\Debug\MongoDB.Bson.xml
+G:\VS2015Code\源代码\NewEcooljie\ecooljie.Model\bin\Debug\MongoDB.Driver.xml
+G:\VS2015Code\源代码\NewEcooljie\ecooljie.Model\bin\Debug\MongoDB.Driver.Core.xml
+G:\VS2015Code\源代码\NewEcooljie\ecooljie.Model\obj\Debug\ecooljie.Model.csprojResolveAssemblyReference.cache
+G:\VS2015Code\源代码\NewEcooljie\ecooljie.Model\obj\Debug\ecooljie.Model.dll
+G:\VS2015Code\源代码\NewEcooljie\ecooljie.Model\obj\Debug\ecooljie.Model.pdb

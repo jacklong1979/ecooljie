@@ -16,7 +16,7 @@ namespace ecooljie.Model
         /// <summary>
         /// 主键
         /// </summary>
-        public int GoodsTypeId { get; set; }
+        public string GoodsTypeId { get; set; }
         /// <summary>
         /// 编码
         /// </summary>

@@ -82,7 +82,7 @@
 		$(function(){
 			$('.wu-side-tree a').bind("click",function(){
 				var title = $(this).text();
-				var url = $(this).attr('data-link') + "?date=" + new Date();;
+				var url = $(this).attr('data-link') + "?random=" + Math.random();
 				var iconCls = $(this).attr('data-icon');
 				var iframe = $(this).attr('iframe')==1?true:false;
 				addTab(title,url,iconCls,iframe);

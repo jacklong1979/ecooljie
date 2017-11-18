@@ -90,8 +90,10 @@ namespace ecooljie.Web.Areas.Admin.Controllers
                 var name = Request.Form["name"];
                 var code = Request.Form["code"];
                 var remark = Request.Form["remark"];
+
                 GoodsType model = new GoodsType();
-                model.Code = code;
+                model.GoodsTypeId =Guid.NewGuid().ToString();
+                model.Code = code;  
                 model.Name = name;
                 model.Remark = remark;
                 rm= gtBll.Save(model);               
@@ -104,8 +106,37 @@ namespace ecooljie.Web.Areas.Admin.Controllers
                 rm.Error = e.Message;
                 return Json(rm, JsonRequestBehavior.AllowGet);
             }
+        }       
+        /// <summary>
+        /// 批量删除
+        /// </summary>
+        /// <param name="ids"></param>
+        /// <returns></returns>
+
+        public ActionResult DeleteGoodsType(string[] _ids)
+        {
+            ResultMessage rm = new ResultMessage();
+            try
+            {
+                List<string> ids = new List<string>();
+                if (_ids.Length > 0)
+                {
+                    foreach (var id in _ids)
+                    {
+                        ids.Add(id);
+                    }                  
+                }
+                rm = gtBll.DeleteMany(ids);
+                return Json(rm, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception e)
+            {
+                rm.Success = false;
+                rm.Message = "删除失败";
+                rm.Error = e.Message;
+                return Json(rm, JsonRequestBehavior.AllowGet);
+            }
         }
-     
         #endregion
     }
 }

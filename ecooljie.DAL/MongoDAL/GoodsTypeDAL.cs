@@ -66,5 +66,34 @@ namespace ecooljie.DAL.MongoDAL
             }
             return rm;
         }
+
+        public ResultMessage Edit(GoodsType model)
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// 批量删除
+        /// </summary>
+        /// <param name="ids"></param>
+        /// <returns></returns>
+        public ResultMessage DeleteMany(List<string> ids)
+        {
+            ResultMessage rm = new ResultMessage();
+            try
+            {
+                Expression<Func<GoodsType, bool>> func = c => c.GoodsTypeId ==ids[0];
+                long n=  MongoDBHelper.DeleteMany<GoodsType>(func);
+                rm.Success = true;
+                rm.Message = "删除成功！删除记录数("+n+")";
+            }
+            catch (Exception e)
+            {
+                rm.Success = false;
+                rm.Message = "删除失败！";
+                rm.Error = e.Message;
+                rm.Exception = e;
+            }
+            return rm;
+        }
     }
 }

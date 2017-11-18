@@ -17,6 +17,18 @@ namespace ecooljie.DAL
         /// <returns></returns>
         ResultMessage Save(T model);
         /// <summary>
+        /// 编辑
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        ResultMessage Edit(T model);
+        /// <summary>
+        /// 批量删除
+        /// </summary>
+        /// <param name="ids">ID集合</param>
+        /// <returns></returns>
+        ResultMessage DeleteMany(List<string> ids);
+        /// <summary>
         /// 分页查询
         /// </summary>
         /// <param name="PageIndex">页码</param>

@@ -168,25 +168,48 @@ namespace ecooljie.DB.MongoDB
         /// <param name="filter"></param>
         public static long DeleteOne<T>(FilterDefinition<T> filter)
         {
-            string collectionName = filter.GetType().Name;
+            string collectionName = typeof(T).Name;
             IMongoCollection<T> collection = db.GetCollection<T>(collectionName);
             var result = collection.DeleteOne(filter);
             return result.DeletedCount;
         }
         /// <summary>
-        /// 插入多个数据
+        /// 删除多个数据
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="collectionName"></param>
         /// <param name="filter"></param>
-        public static long DeleteMany<T>(FilterDefinition<T> filter)
+        public static long DeleteMany<T>(Expression<Func<T, bool>> func)
         {
-            string collectionName = nameof(T);
+            string collectionName = typeof(T).Name;
             IMongoCollection<T> collection = db.GetCollection<T>(collectionName);
-            var result = collection.DeleteMany(filter);
+            var result = collection.DeleteMany(func);
             return result.DeletedCount;
         }
+        /// <summary>
+        /// 批量删除
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="ids"></param>
+        /// <param name="primaryKeyName">主键字段名</param>
+        /// <returns></returns>
+        public static long DeleteMany<T>(List<string> ids,string primaryKeyName= null)
+        {
+            string collectionName = typeof(T).Name;
+            List<WriteModel<T>> requests = new List<WriteModel<T>>();
+            foreach (var id in ids)
+            {
+                var primaryKey = primaryKeyName ?? "_id";
+                BsonDocument document = new BsonDocument(primaryKey, id);
+               // DeleteOneModel<BsonDocument> dom = new DeleteOneModel<BsonDocument>(document);
+                requests.Add(new DeleteOneModel<T>(document));
+                
+            }           
+            IMongoCollection<T> collection = db.GetCollection<T>(collectionName);
+            BulkWriteResult bulkWriteResult = collection.BulkWrite(requests);
+           return bulkWriteResult.DeletedCount;
 
+        }
         #endregion
         #region 查询
 
