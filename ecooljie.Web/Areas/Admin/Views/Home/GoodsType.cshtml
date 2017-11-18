@@ -9,9 +9,10 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Goods</title>
-    <script src="~/Areas/Admin/Scripts/Easyui-1.5.3/jquery.min.js"></script>
+    @*<script src="~/Areas/Admin/Scripts/Easyui-1.5.3/jquery.min.js"></script>
     <script src="~/Areas/Admin/Scripts/Easyui-1.5.3/jquery.easyui.min.js"></script>
     <script src="~/Areas/Admin/Scripts/Easyui-1.5.3/locale/easyui-lang-zh_CN.js"></script>
+    <script src="~/Areas/Admin/Scripts/Common.js"></script>*@
 </head>
 <body>
     <div class="easyui-layout">
@@ -81,27 +82,7 @@
             </div>
         </div>  
     <script>
-        jQuery.alert = function (message,type)
-        {
-            if (type == null || type == undefined || type == "")
-            {
-                $.messager.alert('提示信息:', message, 'info');
-            }
-            else if (type == "info")
-            {
-                $.messager.alert('提示信息:', message, 'info');
-            }
-            else if (type == "error") {
-                $.messager.alert('错误信息:', message, 'error');
-            }
-            else if (type == "question") {
-                $.messager.alert('提示信息:', message, 'question');
-            }
-            else if (type == "warning") {
-                $.messager.alert('警告信息:', message, 'warning');
-            }
-            
-        }
+      
         //查询
         function query() {
             $('#goosTypeTable').datagrid('reload', { name: $('#txtName').textbox('getValue') });

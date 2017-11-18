@@ -1776,6 +1776,7 @@
     <Content Include="Areas\Admin\images\bg_header.jpg" />
     <Content Include="Areas\Admin\images\bg_header_1.jpg" />
     <Content Include="Areas\Admin\images\bg_header_2.jpg" />
+    <Content Include="Areas\Admin\Scripts\Common.js" />
     <Content Include="Areas\Admin\Scripts\Easyui-1.5.3\changelog.txt" />
     <Content Include="Areas\Admin\Scripts\Easyui-1.5.3\easyloader.js" />
     <Content Include="Areas\Admin\Scripts\Easyui-1.5.3\jquery.easyui.min.js" />

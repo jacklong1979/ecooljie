@@ -23,3 +23,6 @@ G:\VS2015Code\NewEcooljie\ecooljie.DAL\bin\Debug\ecooljie.Common.dll
 G:\VS2015Code\NewEcooljie\ecooljie.DAL\bin\Debug\NLog.dll
 G:\VS2015Code\NewEcooljie\ecooljie.DAL\bin\Debug\ecooljie.Common.pdb
 G:\VS2015Code\NewEcooljie\ecooljie.DAL\bin\Debug\NLog.xml
+G:\VS2015Code\源代码\NewEcooljie\ecooljie.DAL\obj\Debug\ecooljie.DAL.csprojResolveAssemblyReference.cache
+G:\VS2015Code\源代码\NewEcooljie\ecooljie.DAL\obj\Debug\ecooljie.DAL.dll
+G:\VS2015Code\源代码\NewEcooljie\ecooljie.DAL\obj\Debug\ecooljie.DAL.pdb
